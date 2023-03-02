@@ -412,6 +412,7 @@ function $SanitizeProvider() {
   }
 
   function arrayToMap(items, lowercaseKeys) {
+    var lowercase = text => text.toLowerCase();
     var obj = {}, i;
     for (i = 0; i < items.length; i++) {
       obj[lowercaseKeys ? lowercase(items[i]) : items[i]] = true;
